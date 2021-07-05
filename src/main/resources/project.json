@@ -1,0 +1,17 @@
+{
+
+    "_class": "com.aski.issue.entity.Project",
+    "projectCode" : "IM",
+    "projectName": "Issue Management Project"
+  },
+  {
+    "_class": "com.aski.issue.entity.Project",
+    "projectCode": "ERP-S",
+    "projectCode": "ERP Project for Sales"
+  },
+  {
+    "_class": "com.aski.issue.entity.Project",
+    "projectCode": "CRM-S",
+    "projectName": "CRM Project For Sales"
+  }
+}

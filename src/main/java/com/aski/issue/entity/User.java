@@ -12,7 +12,7 @@ import java.util.List;
  * Created by temelt on 3.02.2019.
  */
 @Entity
-@Table(name = "users", indexes = {@Index(name = "idx_username", columnList = "uname")})
+@Table(name = "users", indexes = {@Index(name = "idx_username", columnList = "username")})
 @Getter
 @Setter
 @NoArgsConstructor
@@ -23,12 +23,16 @@ public class User extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "uname", length = 100, unique = true)
+    @Column(name = "username", length = 100, unique = true)
     private String username;
+    @Column(name = "tc", length = 100, unique = true)
+    private String tc;
 
     @Column(name = "pwd", length = 200)
     private String password;
 
+    @Column(name = "name", length = 200)
+    private String name;
     @Column(name = "name_surname", length = 200)
     private String nameSurname;
 

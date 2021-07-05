@@ -25,15 +25,13 @@ public class IssueServiceImpl implements IssueService {
     private final IssueRepository issueRepository;
     private final UserRepository userRepository;
     private final ProjectRepository projectRepository;
-    private final IssueHistoryService issueHistoryService;
     private final ModelMapper modelMapper;
 
-    public IssueServiceImpl(IssueRepository issueRepository, UserRepository userRepository, ProjectRepository projectRepository, IssueHistoryService issueHistoryService, ModelMapper modelMapper) {
-
+    public IssueServiceImpl(IssueRepository issueRepository, UserRepository userRepository, ProjectRepository projectRepository,  ModelMapper modelMapper) {
         this.issueRepository = issueRepository;
         this.userRepository = userRepository;
         this.projectRepository = projectRepository;
-        this.issueHistoryService = issueHistoryService;
+
         this.modelMapper = modelMapper;
     }
     @Override
@@ -55,8 +53,9 @@ public class IssueServiceImpl implements IssueService {
     }
 
     @Override
-    public Boolean delete(Long issue) {
-        return null;
+    public Boolean delete(Long issueId) {
+        issueRepository.deleteById(issueId);
+        return true;
     }
 
     @Override

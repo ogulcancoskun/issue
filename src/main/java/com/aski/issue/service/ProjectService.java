@@ -1,6 +1,7 @@
 package com.aski.issue.service;
 
 import com.aski.issue.dto.ProjectDto;
+import com.aski.issue.entity.Project;
 import com.aski.issue.util.TPage;
 import org.springframework.data.domain.Pageable;
 
@@ -10,6 +11,8 @@ import java.util.List;
  * Created by temelt on 4.02.2019.
  */
 public interface ProjectService {
+
+    Project save(Project project);
 
     ProjectDto save(ProjectDto project);
 
